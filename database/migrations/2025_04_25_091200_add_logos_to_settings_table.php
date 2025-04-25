@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('site_settings', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('header_logo')->nullable();
             $table->string('footer_logo')->nullable();
             $table->timestamps();
+
         });
     }
 
@@ -24,6 +25,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('site_settings');
+        Schema::dropIfExists('settings');
+
     }
 };

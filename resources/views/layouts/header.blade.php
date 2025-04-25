@@ -3,7 +3,7 @@
 
       <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img style="border-radius: 10px;" src="{{asset('logo3.png')}}" alt="">
+        <img style="border-radius: 10px;" src="{{ asset('storage/' . $settings->header_logo)}}" alt="">
         <!-- <h1>Append</h1>
         <span>.</span> -->
       </a>
