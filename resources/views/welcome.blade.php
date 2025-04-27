@@ -13,17 +13,15 @@
 <!-- Hero Section - Home Page -->
 <section id="hero" class="hero">
 
-  <img src="bg.png" alt="" data-aos="fade-in">
-
+  <img src="{{ asset('storage/' . $heroSection->background_image)}}" alt="" data-aos="fade-in">
+  
   <div class="container">
     <div class="row">
       <div class="col-lg-10">
       <br><br>
-        <h2 data-aos="fade-up" data-aos-delay="100">شركة <span style="background-color: #0f562a;border-radius:5px;padding: 0px 3px">الثغر العربية</span></h2>
+        <h2 data-aos="fade-up" data-aos-delay="100">{{$heroSection->company_header}} <span style="background-color: #0f562a;border-radius:5px;padding: 0px 3px">{{$heroSection->company_name}}</span></h2>
         <br>
-        <p data-aos="fade-up" data-aos-delay="200">      ارتبط    الشماغ بِحكاياتِنا حكايةُ أصالة عربيةٍ
-
-        !
+        <p data-aos="fade-up" data-aos-delay="200">{{$heroSection->company_slogan}}
         </p>
       </div>
       <!-- <div class="col-lg-5">

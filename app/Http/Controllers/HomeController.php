@@ -9,6 +9,8 @@ class HomeController extends Controller
     public function index()
     {
     $settings = \App\Models\LogoSettings::first(); // Fetch the first Hero section
-    return view('welcome' , compact('settings')); // Make sure home.blade.php exists in resources/views/
+    $heroSection = \App\Models\HeroSection::first(); // If you want the first record (you can customize this)
+
+    return view('welcome' , compact('settings','heroSection')); // Make sure home.blade.php exists in resources/views/
     }
 }
