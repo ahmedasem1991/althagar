@@ -85,34 +85,20 @@
       </div>
     </div><!-- Features Item -->
 
-<style>
-  .htitle {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19px;
-    padding: 10px 20px;
-    background: rgba(var(--accent-color-rgb), 0.05);
-    color: var(--accent-color);
-    border-radius: 7px;
-    display: inline-block;
-}
+    <style>
+      .htitle {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 10px 20px;
+        background: rgba(var(--accent-color-rgb), 0.05);
+        color: var(--accent-color);
+        border-radius: 7px;
+        display: inline-block;
+    }
 
-</style>
+    </style>
   
-    <!-- <div  style="padding-top: 100px;" class="row gy-4 align-items-stretch justify-content-between features-item ">
-      <div class="col-lg-6 d-flex align-items-center  " data-aos="zoom-out">
-        <center> <img style="width: 80%;border-radius:10px"   src="assets/img/about1.webp" class="img-fluid" alt=""></center>
-      </div>
-      <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-        <h3  >من نحن</h3>
-        <p>بدأت شركة الثغر في الطيران نحو الريادة في مجال بدأت الأشمغة في المملكة العربية السعودية، وهي اليوم في عامها الأول، تُحرز تقدمًا ملحوظًا نحو تحقيق أهدافها الرئيسية في جدة
-
-.</p>
-         
-<br> 
-        <a href="#" class="btn btn-get-started align-self-start">المزيد</a>
-      </div>
-    </div>  -->
 
   </div>
 
@@ -124,8 +110,8 @@
 
 <div class="container" style="padding-top: 20px;padding-bottom: 80px;" data-aos="fade-up" data-aos-delay="100">
 <div class="container section-title"  data-aos="fade-up">
-  <h2>تاريخ الشماغ</h2>
-  <p> ارتبط الشماغ بِحكاياتِنا حكايةُ أصالة عربيةٍ</p>
+  <h2>{{ $historySection->history_header }}</h2>
+  <p>{{ $historySection->history_slogan }}</p>
 </div><!-- End Section Title -->
 
 
@@ -133,24 +119,15 @@
 
     <div class="col-xl-5 content">
       <!-- <h3>الخدمات</h3> -->
-      <h2> تاريخ الشماغ</h2>
-      <p>
-منذ فجر التاريخ في بلاد ما بين النهرين برز الشماغ رمزٌ للثقافة العربية كقطعةٍ مربعةٍ من القماشِ تُغطي الرأسَ وتُحمي من حرّ الشمسِ ورملِ الصحراءِ .
-
-<br><br>
-صُنعَ الشماغُ في العصورِ القديمةِ من الصوفِ أو القطنِ أو الكتانِ، وكان لونهُ أبيضَ أو أسودَ أو بنيًا لم يكنْ مجرّدَ غطاءٍ للرأسِ فحسب، بلْ كانَ يُستخدمُ أيضًا كغطاءٍ للوجهِ لحمايةِ مرتديهِ من العواصفِ الرمليةِ والعواصفِ الترابيةِ، مع مرورِ الزمنِ تحوّلَ الشماغُ إلى رمزٍ للثقافةِ العربيةِ، خاصةً في القرنِ التاسع عشرِ، أصبحَ يُرتدى من قبلِ الرجالِ من جميعِ الطبقاتِ الاجتماعيةِ، ورمزًا للوحدةِ العربيةِ اليوم.
-
-
-<br><br>
- يُعدّ الشماغُ جزءًا لا يتجزأ من الثقافةِ العربيةِ، يُرتدى من قبلِ الرجالِ في جميعِ أنحاءِ العالمِ العربيِ  وباتَ رمزًا للثقافةِ العربيةِ والإسلاميةِ، يُعبّر عن الفخرِ والاعتزازِ بالهويةِ العربيةِ.
-</p>
+      <h2>{{ $historySection->history_header }}</h2>
+      <p>{!! nl2br(e($historySection->history_description)) !!}</p>
 <br>
      
     </div>
 
     <div class="col-xl-7">
      
-    <img class="img-thumbnail" style="border-radius:20px" src="{{asset('bg2.jpg')}}">
+    <img class="img-thumbnail" style="border-radius:20px" src="{{ asset('storage/' . $historySection->background_1) }}">
     </div>
 
   </div>

@@ -12,8 +12,8 @@ class HomeController extends Controller
     $heroSection = \App\Models\HeroSection::first(); // If you want the first record (you can customize this)
     $partners = \App\Models\Partner::all(); // Fetch all partners
     $aboutSection = \App\Models\AboutSection::first();
+    $historySection = \App\Models\HistorySection::first();
 
-
-    return view('welcome' , compact('settings','heroSection','partners','aboutSection')); // Make sure home.blade.php exists in resources/views/
+    return view('welcome' , compact('settings','heroSection','partners','aboutSection','historySection')); // Make sure home.blade.php exists in resources/views/
     }
 }
