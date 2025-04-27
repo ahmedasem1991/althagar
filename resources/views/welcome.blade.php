@@ -46,18 +46,6 @@
         <img src="{{ asset('storage/' . $partner->logo) }}" class="img-fluid" alt="">
       </div><!-- End Client Item -->
       @endforeach
-
-      {{-- <div class="col-xl-4 col-md-3 col-6 client-logo">
-        <img src="D3.png" class="img-fluid" alt="">
-      </div><!-- End Client Item --> --}}
-
-      {{-- <div class="col-xl-2 col-md-3 col-6 client-logo">
-        <img src="assets/img/clients/tag.png" class="img-fluid" alt="">
-      </div><!-- End Client Item --> --}}
-
-      
-      
-       
     </div>
 
   </div>
@@ -69,8 +57,8 @@
 
   <!--  Section Title -->
   <div class="container section-title"  data-aos="fade-up">
-    <h2>الثغر العربية</h2>
-    <p>حكايةُ أصالة عربيةٍ تُنسج خيوطها على يدِ شركة الثغر</p>
+    <h2>{{ $aboutSection->about_header }}</h2>
+    <p>{{ $aboutSection->about_slogan }}</p>
   </div><!-- End Section Title -->
 
   <div class="container" style="padding-bottom: 100px;">
@@ -79,22 +67,20 @@
       <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
         <h3>شركة 
           <span style="color: #0f562a;">
-        الثغر العربية
+            {{ $aboutSection->about_side_header }}
         </span>
       </h3>
         <p>
-        هي شركة سعودية ذات مسؤولية محدودة تعمل في المجال التجاري والصناعي ومقرها الرئيسي المملكة العربية السعودية-جدة.
+          {{ $aboutSection->about_description }}
         <br>
-      
-
         </p>
         <br>
         <a href="{{url('about-us')}}" class="btn btn-get-started">المزيد</a>
       </div>
       <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
         <div class="image-stack">
-          <img src="gold.jpg" alt="" class="stack-front">
-          <img src="assets/img/4.jpg" alt="" class="stack-back">
+          <img src="{{ asset('storage/' . $aboutSection->background_1)}}" alt="" class="stack-front">
+          <img src="{{ asset('storage/' . $aboutSection->background_2)}}" alt="" class="stack-back">
         </div>
       </div>
     </div><!-- Features Item -->
