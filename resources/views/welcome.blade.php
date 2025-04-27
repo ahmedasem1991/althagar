@@ -354,26 +354,18 @@
       <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
         <div class="faq-container">
-          <div class="faq-item faq-active">
-            <h3><span class="num">1.</span> <span>
-              ما هي علامات شركة الثغر التجارية؟
+          @foreach ($faqs as  $index => $faq)
+          <div class="faq-item {{ $loop->first ? 'faq-active' : '' }}">
+            <h3><span class="num">{{ $index + 1 }}.</span> <span>
+              {{ $faq->question }}
             </span></h3>
             <div class="faq-content">
-              <p>  تملك شركة الثغر العلامة التجارية المعروفة: شماغ التاج
+              <p>  {{ $faq->answer }}
               </p>
             </div>
             <i class="faq-toggle bi bi-chevron-right"></i>
           </div><!-- End Faq item-->
-
-          <div class="faq-item">
-            <h3><span class="num">2.</span> <span>   أين تقع شركة الثغر؟</span></h3>
-            <div class="faq-content">
-              <p> 
-              يقع المقر الرئيسي لشركة الثغر في مدينة جدة، المملكة العربية السعودية.
-     </p>
-            </div>
-            <i class="faq-toggle bi bi-chevron-right"></i>
-          </div><!-- End Faq item-->
+          @endforeach
 
          
 
