@@ -157,7 +157,7 @@
     <div class="row gy-4 align-items-center features-item">
       @foreach ($products as $product)
           <div class="col-md-3  " data-aos="fade-up" data-aos-delay="200">
-            <a  href="{{ $product->url }}" target="_blank"> <img src="{{$product->image}}" style="width: 100%;" class="img-fluid">
+            <a  href="{{ $product->url }}" target="_blank"> <img src="{{ asset('storage/' . $product->image)}}" style="width: 100%;" class="img-fluid">
             </a> 
             
             <br><br>
