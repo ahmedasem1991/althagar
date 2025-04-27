@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,5 @@ Route::get('/change-lang', function () {
 
     return redirect()->back();
 })->name('changeLang');
+
+Route::post('/contact', [ContactFormController::class, 'store'])->name('contact.store');

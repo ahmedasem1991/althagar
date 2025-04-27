@@ -482,7 +482,7 @@
  
       <div class="col-lg-6">
    
-        <form  data-aos="fade-up" data-aos-delay="200" id="contactForm2" action="contact-us" method="post" role="form" class="php-email-form">
+        <form  data-aos="fade-up" data-aos-delay="200" id="contactForm2" action="{{ route('contact.store') }}" method="post" role="form" class="php-email-form">
             <input type="hidden"   value="{{ csrf_token() }}" class="form-control-input" id="_token" name="_token" required>
           <div class="row gy-4">
 
@@ -499,7 +499,7 @@
             </div>
 
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="الرسالة" required></textarea>
+              <textarea class="form-control" name="description" rows="6" placeholder="الرسالة" required></textarea>
             </div>
 
             <div class="col-md-12 text-center">
@@ -508,10 +508,10 @@
               <div class="sent-message">Your message has been sent. Thank you!</div> -->
               <div class="form-group">
               @if(config('services.recaptcha.key'))
-    <div class="g-recaptcha"
-        data-sitekey="{{config('services.recaptcha.key')}}">
-    </div>
-@endif
+                  <div class="g-recaptcha"
+                      data-sitekey="{{config('services.recaptcha.key')}}">
+                  </div>
+              @endif
               </div>
               <button type="submit">إرسال</button>
             </div>
