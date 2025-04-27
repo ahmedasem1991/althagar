@@ -4,7 +4,7 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="/" class="  d-flex align-items-center">
-          <img style="border-radius: 10px;width:100px" src="{{asset('logo.png')}}" alt="">
+          <img style="border-radius: 10px;width:100px" src="{{ asset('storage/' . $settings->footer_logo)}}" alt="">
           </a>
           <br> 
           <p>
