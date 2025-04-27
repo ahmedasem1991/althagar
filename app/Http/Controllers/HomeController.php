@@ -10,7 +10,8 @@ class HomeController extends Controller
     {
     $settings = \App\Models\LogoSettings::first(); // Fetch the first Hero section
     $heroSection = \App\Models\HeroSection::first(); // If you want the first record (you can customize this)
+    $partners = \App\Models\Partner::all(); // Fetch all partners
 
-    return view('welcome' , compact('settings','heroSection')); // Make sure home.blade.php exists in resources/views/
+    return view('welcome' , compact('settings','heroSection','partners')); // Make sure home.blade.php exists in resources/views/
     }
 }

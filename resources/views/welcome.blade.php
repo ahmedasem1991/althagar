@@ -41,14 +41,19 @@
   <div class="container-fluid" data-aos="fade-up">
 
     <div class="row gy-4 justify-content-center">
+      @foreach ($partners as $i =>$partner)
+      <div class="{{ $i == 0 ? 'col-xl-4 col-md-3 col-6' : 'col-xl-2 col-md-3 col-6' }} client-logo">
+        <img src="{{ asset('storage/' . $partner->logo) }}" class="img-fluid" alt="">
+      </div><!-- End Client Item -->
+      @endforeach
 
-      <div class="col-xl-4 col-md-3 col-6 client-logo">
+      {{-- <div class="col-xl-4 col-md-3 col-6 client-logo">
         <img src="D3.png" class="img-fluid" alt="">
-      </div><!-- End Client Item -->
+      </div><!-- End Client Item --> --}}
 
-      <div class="col-xl-2 col-md-3 col-6 client-logo">
+      {{-- <div class="col-xl-2 col-md-3 col-6 client-logo">
         <img src="assets/img/clients/tag.png" class="img-fluid" alt="">
-      </div><!-- End Client Item -->
+      </div><!-- End Client Item --> --}}
 
       
       
