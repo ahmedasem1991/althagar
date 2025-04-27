@@ -108,30 +108,30 @@
 
 <section id="" class="about">
 
-<div class="container" style="padding-top: 20px;padding-bottom: 80px;" data-aos="fade-up" data-aos-delay="100">
-<div class="container section-title"  data-aos="fade-up">
-  <h2>{{ $historySection->history_header }}</h2>
-  <p>{{ $historySection->history_slogan }}</p>
-</div><!-- End Section Title -->
+  <div class="container" style="padding-top: 20px;padding-bottom: 80px;" data-aos="fade-up" data-aos-delay="100">
+  <div class="container section-title"  data-aos="fade-up">
+    <h2>{{ $historySection->history_header }}</h2>
+    <p>{{ $historySection->history_slogan }}</p>
+  </div><!-- End Section Title -->
 
 
-  <div class="row align-items-xl-center gy-5">
+    <div class="row align-items-xl-center gy-5">
 
-    <div class="col-xl-5 content">
-      <!-- <h3>الخدمات</h3> -->
-      <h2>{{ $historySection->history_header }}</h2>
-      <p>{!! nl2br(e($historySection->history_description)) !!}</p>
-<br>
-     
+      <div class="col-xl-5 content">
+        <!-- <h3>الخدمات</h3> -->
+        <h2>{{ $historySection->history_header }}</h2>
+        <p>{!! nl2br(e($historySection->history_description)) !!}</p>
+  <br>
+      
+      </div>
+
+      <div class="col-xl-7">
+      
+      <img class="img-thumbnail" style="border-radius:20px" src="{{ asset('storage/' . $historySection->background_1) }}">
+      </div>
+
     </div>
-
-    <div class="col-xl-7">
-     
-    <img class="img-thumbnail" style="border-radius:20px" src="{{ asset('storage/' . $historySection->background_1) }}">
-    </div>
-
   </div>
-</div>
 
 </section><!-- End About Section -->
 
@@ -144,61 +144,32 @@
     نحرص في شركة الثغر على استخدام أفضل المواد الخام والتقنيات في تصنيع منتجاتنا، لضمان جودة عالية ودقة في التفاصيل. 
    
    
-<br>
-    نقدم في شركة الثغر مجموعة واسعة من الأشمغة 
-   
-   
-  </p>
+       <br>
+        نقدم في شركة الثغر مجموعة واسعة من الأشمغة 
+      
+      
+    </p>
  
   </div><!-- End Section Title -->
 
   <div class="container" style="padding-bottom: 100px;">
 
     <div class="row gy-4 align-items-center features-item">
-      <div class="col-md-3  " data-aos="fade-up" data-aos-delay="200">
-      <a  href="https://altaajstore.com/AmOlmQ" target="_blank"> <img src="platin.jpg" style="width: 100%;" class="img-fluid">
-      </a> 
-      
-      <br><br>
-       <center> 
-        <strong>
-        شماغ التاج البلاتيني
-        </strong>
-      </center>
-      </div>
-      <div class="col-md-3  " data-aos="fade-up" data-aos-delay="200">
-     <a href="https://altaajstore.com/RbWDlY" target="_blank"> <img src="gold.jpg" style="width: 100%;" class="img-fluid"> </a>
-      <br><br>
-       <center> 
-        <strong>
-        شماغ التاج الذهبي
-        </strong>
-      </center>
-       </div>
-       <div class="col-md-3  " data-aos="fade-up" data-aos-delay="200">
-       <a href="https://altaajstore.com/xEZqjY" target="_blank">    <img src="silver.jpg" style="width: 100%;" class="img-fluid">
-</a>
-       <br><br>
-       <center> 
-        <strong>
-        شماغ التاج الفضي
-        </strong>
-      </center>
-       </div>
-       <div class="col-md-3  " data-aos="fade-up" data-aos-delay="200">
-       <a href="https://altaajstore.com/pODxQx" target="_blank">  <img src="white.jpg" style="width: 100%;" class="img-fluid"> </a>
-       <br><br>
-       <center> 
-        <strong>
-        شماغ التاج الأبيض
-        </strong>
-      </center>
-       </div>
-    
+      @foreach ($products as $product)
+          <div class="col-md-3  " data-aos="fade-up" data-aos-delay="200">
+            <a  href="{{ $product->url }}" target="_blank"> <img src="{{$product->image}}" style="width: 100%;" class="img-fluid">
+            </a> 
+            
+            <br><br>
+            <center> 
+              <strong>
+                {{ $product->name }}
+              </strong>
+            </center>
+        </div>
+      @endforeach
     </div>
-    
- 
- 
+
   </div>
 
 </section> 
