@@ -84,4 +84,13 @@ class HistorySectionResource extends Resource
             'edit' => Pages\EditHistorySection::route('/{record}/edit'),
         ];
     }
+    public static function getModelLabel(): string
+    {
+        return 'تاريخ الشماخ';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'تاريخ الشماخ';
+    }
 }

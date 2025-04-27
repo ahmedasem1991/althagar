@@ -72,4 +72,13 @@ class FaqResource extends Resource
             'edit' => Pages\EditFaq::route('/{record}/edit'),
         ];
     }
+    public static function getModelLabel(): string
+    {
+        return 'اسئلة شائعة';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'اسئلة شائعة';
+    }
 }

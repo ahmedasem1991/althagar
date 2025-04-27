@@ -80,4 +80,13 @@ class TeamMemberResource extends Resource
             'edit' => Pages\EditTeamMember::route('/{record}/edit'),
         ];
     }
+    public static function getModelLabel(): string
+    {
+        return 'اعضاء الفريق';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'اعضاء الفريق';
+    }
 }

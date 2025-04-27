@@ -84,4 +84,13 @@ class ContactFormResource extends Resource
             'edit' => Pages\EditContactForm::route('/{record}/edit'),
         ];
     }
+    public static function getModelLabel(): string
+    {
+        return 'تواصل معنا';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'تواصل معنا';
+    }
 }

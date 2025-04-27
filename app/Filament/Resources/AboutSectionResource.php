@@ -94,4 +94,13 @@ class AboutSectionResource extends Resource
             'edit' => Pages\EditAboutSection::route('/{record}/edit'),
         ];
     }
+    public static function getModelLabel(): string
+    {
+        return 'من نحن';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'من نحن';
+    }
 }

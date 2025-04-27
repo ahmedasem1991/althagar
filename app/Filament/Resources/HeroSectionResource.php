@@ -80,4 +80,13 @@ class HeroSectionResource extends Resource
             'edit' => Pages\EditHeroSection::route('/{record}/edit'),
         ];
     }
+    public static function getModelLabel(): string
+    {
+        return 'المقدمة';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'المقدمة';
+    }
 }

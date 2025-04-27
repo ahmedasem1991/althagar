@@ -80,4 +80,13 @@ class ProductResource extends Resource
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
     }
+    public static function getModelLabel(): string
+    {
+        return 'المنتجات';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'المنتجات';
+    }
 }
