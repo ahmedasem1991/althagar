@@ -14,8 +14,10 @@ class HomeController extends Controller
     $aboutSection = \App\Models\AboutSection::first();
     $historySection = \App\Models\HistorySection::first();
     $products = \App\Models\Product::all();
+    $teamMembers = \App\Models\TeamMember::all(); // Fetch Team Members
 
 
-    return view('welcome' , compact('settings','heroSection','partners','aboutSection','historySection','products')); // Make sure home.blade.php exists in resources/views/
+
+    return view('welcome' , compact('settings','heroSection','partners','aboutSection','historySection','products','teamMembers')); // Make sure home.blade.php exists in resources/views/
     }
 }
